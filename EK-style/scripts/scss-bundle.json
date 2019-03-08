@@ -1,0 +1,4 @@
+{
+    "entry": "./src/assets/styles/_styles.scss",
+    "dest": "scss-style.scss"
+}

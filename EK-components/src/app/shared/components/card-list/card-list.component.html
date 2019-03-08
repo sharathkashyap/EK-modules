@@ -1,0 +1,35 @@
+<div _ngcontent-c11="" class="ui twelve wide column">
+<div class="d-flex flex-ai-center">
+  <h4 class="ui header m-0 mr-5 pageSection-heading">{{title}}</h4>
+  <span class="ui primary label pageSection-count">{{contents.length}}</span>
+  <button type="button" (click)="navigateToViewAll(section)" class="sb-btn sb-btn-xs sb-btn-secondary ml-auto">Viewall</button>
+</div>
+<!--<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+  <div ngxSlickItem  class="pr-20">
+  <div *ngFor="let contentToDisplay of contents" class="slide">
+      <ek-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'pr-20'" class="pr-20 d-block"></ek-card>
+  </div>
+</div>
+</ngx-slick>-->
+<ngx-slick in-view-container (inview)="inview($event)"  
+                (afterChange)="inviewChange(contents,$event)" 
+                (beforeChange)="checkSlide($event)" 
+                class="carousel" 
+                #slickModal="slick-modal" 
+                [config]="slideConfig">
+                <div in-view-item ngxSlickItem *ngFor="let contentToDisplay of contents" class="pr-20 d-block">
+                   
+                        <ek-card  appContentDirection
+                            [content]="contentToDisplay" 
+                            [customClass]=""
+                            (clickEvent)="playContent($event)"
+                            class="pr-20 d-block" [class.last-card]="pr-0">
+                        </ek-card>
+                    
+
+                </div>
+                <!--<div ngxSlickItem *ngFor="let contentToDisplay of contents" class="slide pr-20">
+                    <ek-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'mr-20'" class="pr-20 d-block"></ek-card>
+                </div>-->
+  </ngx-slick>
+</div>
