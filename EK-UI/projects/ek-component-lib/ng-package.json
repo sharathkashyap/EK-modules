@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ek-component-lib",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "ek-style",
+    "slick-carousel",
+    "jquery",
+    "ngx-slick",
+    "angular-carousel",
+    "@types/hammerjs",
+    "angular2-carousel",
+    "hammerjs",
+    "ngx-carousel-lib"
+  ]
+}

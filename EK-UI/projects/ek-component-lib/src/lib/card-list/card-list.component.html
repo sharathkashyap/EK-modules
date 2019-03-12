@@ -1,0 +1,38 @@
+<div _ngcontent-c11="" class="ui twelve wide column">
+  <div class="d-flex flex-ai-center">
+    <h4 class="ui header m-0 mr-5 pageSection-heading">{{title}}AB</h4>
+    <span class="ui primary label pageSection-count">{{contents.length}}</span>
+    <button type="button" (click)="navigateToViewAll($event)" class="sb-btn sb-btn-xs sb-btn-secondary ml-auto">Viewall</button>
+  </div>
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    
+    <div ngxSlickItem *ngFor="let contentToDisplay of contents" class="slide">
+        <lib-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'pr-20'" class="pr-20 d-block"></lib-card>
+    </div>
+  </ngx-slick-carousel>
+  <carousel-component>
+      <div *ngFor="let contentToDisplay of contents" class="item-carousel pr-20">
+          <lib-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'pr-20'" class="pr-20 d-block"></lib-card>
+      </div>
+  </carousel-component>
+  <!--<ngx-slick in-view-container (inview)="inview($event)"  
+                  (afterChange)="inviewChange(contents,$event)" 
+                  (beforeChange)="checkSlide($event)" 
+                  class="carousel" 
+                  [config]="slideConfig">
+                  <div in-view-item ngxSlickItem *ngFor="let contentToDisplay of contents" class="pr-20 d-block">
+                     
+                          <lib-card  appContentDirection
+                              [content]="contentToDisplay" 
+                              [customClass]=""
+                              (clickEvent)="playContent($event)"
+                              class="pr-20 d-block" [class.last-card]="pr-0">
+                          </lib-card>
+                      
+  
+                  </div>
+                  <div ngxSlickItem *ngFor="let contentToDisplay of contents" class="slide pr-20">
+                      <ek-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'mr-20'" class="pr-20 d-block"></ek-card>
+                  </div>
+    </ngx-slick>-->
+  </div>
