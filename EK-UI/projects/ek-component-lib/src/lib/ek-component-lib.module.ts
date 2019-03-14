@@ -7,6 +7,7 @@ import { CarouselModule } from "ngx-carousel-lib";
 import { EkComponentLibComponent } from './ek-component-lib.component';
 import { CardComponent } from './card/card.component';
 import { CardListComponent } from './card-list/card-list.component';
+import { ProfileSectionComponent } from './profile-section/profile-section.component';
 
 
 
@@ -16,7 +17,7 @@ import { CardListComponent } from './card-list/card-list.component';
     CarouselModule,
     SlickCarouselModule
   ],
-  declarations: [EkComponentLibComponent, CardComponent, CardListComponent],
-  exports: [EkComponentLibComponent,CardComponent,CardListComponent]
+  declarations: [EkComponentLibComponent, CardComponent, CardListComponent, ProfileSectionComponent],
+  exports: [EkComponentLibComponent,CardComponent,CardListComponent,ProfileSectionComponent]
 })
 export class EkComponentLibModule { }

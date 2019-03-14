@@ -4,17 +4,23 @@
     <span class="ui primary label pageSection-count">{{contents.length}}</span>
     <button type="button" (click)="navigateToViewAll($event)" class="sb-btn sb-btn-xs sb-btn-secondary ml-auto">Viewall</button>
   </div>
+  <div>Carousel Option1</div>
+  <div style="padding: 20px;">
   <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
     
     <div ngxSlickItem *ngFor="let contentToDisplay of contents" class="slide">
-        <lib-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'pr-20'" class="pr-20 d-block"></lib-card>
+        <lib-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" style="padding-right:20px;margin-bottom:10px;" [customClass]="'pr-20'" class="pr-20 d-block"></lib-card>
     </div>
   </ngx-slick-carousel>
+  </div>
+  <div>Carousel Option2</div>
+  <div style="padding: 20px;">
   <carousel-component>
-      <div *ngFor="let contentToDisplay of contents" class="item-carousel pr-20">
+      <div *ngFor="let contentToDisplay of contents" class="item-carousel pr-20" style="border:none;height:auto;">
           <lib-card appContentDirection [content]="contentToDisplay" (clickEvent)="playContent($event)" [customClass]="'pr-20'" class="pr-20 d-block"></lib-card>
       </div>
   </carousel-component>
+</div>
   <!--<ngx-slick in-view-container (inview)="inview($event)"  
                   (afterChange)="inviewChange(contents,$event)" 
                   (beforeChange)="checkSlide($event)" 

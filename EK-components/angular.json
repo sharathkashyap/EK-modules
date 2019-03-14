@@ -122,6 +122,41 @@
           }
         }
       }
+    },
+    "ek-component-lib": {
+      "root": "projects/ek-component-lib",
+      "sourceRoot": "projects/ek-component-lib/src",
+      "projectType": "library",
+      "prefix": "ek",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ek-component-lib/tsconfig.lib.json",
+            "project": "projects/ek-component-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ek-component-lib/src/test.ts",
+            "tsConfig": "projects/ek-component-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ek-component-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ek-component-lib/tsconfig.lib.json",
+              "projects/ek-component-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "EK-components"

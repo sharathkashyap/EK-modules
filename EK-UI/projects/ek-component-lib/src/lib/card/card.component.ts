@@ -133,7 +133,7 @@ ngOnInit() {
 
 
 onAction(data, action) {
-  this.clickEvent.emit({ 'action': action, 'data': data });
+  //this.clickEvent.emit({ 'action': action, 'data': data });
 }
 
 }

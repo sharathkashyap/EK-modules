@@ -5,6 +5,3 @@
 export * from './lib/ek-component-lib.service';
 export * from './lib/ek-component-lib.component';
 export * from './lib/ek-component-lib.module';
-export * from './lib/card/card.component';
-export * from './lib/card-list/card-list.component';
-export * from './lib/profile-section/profile-section.component';

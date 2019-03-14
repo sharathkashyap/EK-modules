@@ -17,6 +17,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ek-component-lib": [
+        "dist/ek-component-lib"
+      ],
+      "ek-component-lib/*": [
+        "dist/ek-component-lib/*"
+      ]
+    }
   }
 }

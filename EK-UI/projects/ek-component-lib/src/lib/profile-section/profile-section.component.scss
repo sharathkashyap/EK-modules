@@ -1,0 +1,241 @@
+.menu {
+    float:left;
+    width:30%;
+    text-align:center;
+    padding-left: 1em;
+  }
+  .menu a {
+    background-color:#e5e5e5;
+    padding:1em;
+    margin-top:1em;
+    display:block;
+    width:80%;
+    color:black;
+  }
+  .main {
+    float:left;
+    width:35%;
+    padding:0 0.5em;
+    margin: 1em 0;
+  }
+  .right {
+    background-color:#e5e5e5;
+    float:left;
+    width:20%;
+    padding:1.5em;
+    margin-top:1em;
+    text-align:center;
+  }
+  #avatar {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+    background-image: url('http://i.stack.imgur.com/Dj7eP.jpg');
+    
+    /* make a square container */
+    width: 100%;
+    height: 150px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.semicircledetail {
+  border: 1px solid #024f9d!important;
+  border-radius: 18.5px;
+  color: #024f9d;
+  font-size: 1.16rem;
+  padding: 0.1em 0.3em;
+  background: #FFF;
+  text-align: left;
+  margin-top: 1em;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+  
+  @media only screen and (max-width:800px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width:100%;
+    }
+    .menu a {
+      width: 100%;
+    }
+    #avatar {
+        width: 150px;
+    }
+    .semicircledetail {
+        text-align: center;
+        width: 96%;
+    }
+  }
+
+    .profile-name {
+        color: #000;
+        margin: 0;
+        font-size: 1.6rem;
+
+        padding: 5px;
+
+        font-weight:bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -ms-flexbox;
+    }
+
+    .user {
+        text-align: center !important;
+
+        padding:0,0,0, 1em !important;
+    }
+
+    .editIcon {
+        margin: 0,0,0,5px;
+
+        font-size: 1.8rem !important;
+    }
+
+    .change-role {
+        color: dodgerblue;
+        text-align: center;
+
+       margin: 0,10,0,0;
+
+        font-size: 1.2rem;
+
+        padding: 0 2px 2px 2px;
+
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .user-type {
+        color:#000;
+        text-align: center;
+
+        margin: 0, 10px, 0, 0;
+
+        font-size: 1.2rem;
+
+        padding:2px;
+
+        font-weight:bold;
+        margin: 0;
+    }
+
+    .offline-message {
+        background-color: red !important;
+        line-height: 2.5em !important;
+        text-align: center !important;
+        color: #FFF;
+        top: 0;
+        position: sticky;
+        z-index: 11;
+        display: block;
+        width: 100%;
+    }
+
+    .custom-avatar {
+        height: 22vw;
+        width: 22vw;
+        border: 1px solid #FFF;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .info-title {
+        color: darkgray;
+        font-size: 1.2rem;
+        font-weight:700;
+        display: inline-block;
+        width: 40%;
+        text-align: right;
+    }
+
+    .section-title {
+        color: #000;
+
+        margin: 0, 0, -5px, 0 !important;
+
+        font-size: 1.7rem;
+        padding: 0;
+
+        margin:0;
+
+        font-weight:700;
+    }
+
+    .page-content {
+        font-weight:600;
+        color: #777;
+    }
+
+    .vertical-align {
+        vertical-align: sub;
+        color: #979797;
+        font-size: 1.2rem;
+        font-weight:700;
+    }
+
+    .text-align {
+        width: 40%;
+        display: inline-block;
+        vertical-align: sub;
+        margin-left: 30px;
+    }
+
+    .icon-align {
+       margin: 0, 0, 0, 2px;
+
+        size: 2px;
+        display: inline-block;
+    }
+
+
+.padding-bottom-10 {
+    padding: 0, 0, 10px, 0 !important;
+}
+
+.padding-top-10 {
+    padding: 10px, 0, 0, 0 !important;
+}
+
+.padding-left-10 {
+    padding: 0, 0, 0, 10px !important;
+}
+
+/* Hide extra margin of the popover-controller */
+
+.box {
+    .popover-content {
+        min-width: 96px;
+        width: auto;
+        display: inline-block;
+        height: auto !important;
+    }
+
+    .list.list-md {
+        margin: 0 !important;
+    }
+
+    .item-md {
+        padding: 0 !important;
+    }
+
+    .label-md {
+        margin: 0, 0, 0, 16px;
+    }
+}
+
+.signin-card-bg {
+    background-color:  lightgray;
+
+    padding: 10px, 0;
+}
